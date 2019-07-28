@@ -10,7 +10,7 @@ Different types of common hardware are used to enable movement
 and sensor to detect environment changes (distance sensor and accelerometer)
 
 ![Robot Car - Raspberry Pi 3](images/Robot_Car.jpg)
-![Robot Car - others](images/Robot_Car_others.JPG)
+![Robot Car - others](images/Robot_Car_others.jpg)
 
 ## Getting Started
 **Physical setup (components):**
@@ -42,15 +42,15 @@ control the Robot Car
 * HDMI LCD display to show the Raspberry Pi desktop for easy calibration. 
 We could use VNC to remote display the Raspberry Pi desktop also
 
-![Robot Car - component 1](images/Robot_Car_component1.JPG)
-![Robot Car - component 1](images/Robot_Car_component2.JPG)
-![Robot Car - component 1](images/Robot_Car_component3.JPG)
+![Robot Car - component 1](images/Robot_Car_component1.jpg)
+![Robot Car - component 1](images/Robot_Car_component2.jpg)
+![Robot Car - component 1](images/Robot_Car_component3.jpg)
 
 **Wiring the Robot Car**
 
 ![Robot Car - wiring 1](images/Robot_Car_wiring1.jpg)
 ![Robot Car - wiring 2](images/Robot_Car_wiring2.jpg)
-![Robot Car - wiring 3](images/Robot_Car_wiring3.JPG)
+![Robot Car - wiring 3](images/Robot_Car_wiring3.jpg)
 ![Robot Car - wiring 4](images/Robot_Car_wiring4.jpg)
 
 #### Installing
