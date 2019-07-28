@@ -13,25 +13,40 @@ and sensor to detect environment changes (distance sensor and accelerometer)
 ![Robot Car - others](images/Robot_Car_others.JPG)
 
 ## Getting Started
-**Physical setup:**
+**Physical setup (components):**
 * Robot Car chassis, wheels, motors, power supply
  and circuit control board (L298N) for movement
 * Single-board computer (Raspberry Pi 3) to 
 run the Python program and control the Raspberry Pi Robot Car
 * Separated Power supply for the robot car motors
 * Separated Power supply for the Raspberry Pi 3
+* Ultrasonic sensor (HC-SR04) to sense the distance
+* Accelerometer (ADXL345) to sense the dips, humps, acceleration 
+and deceleration
+* Servo (sg90) micro-servo to move the HC-SR04 to scan the distance
+ between the robot car and obstacles 
+ * Mounting kit for the Servo
+* RGB led display different colour (RGB led) to signal the status of the robot car
+* 8x8 LED matrix (Maxim 7219) to display single character of scrolling message in LEDs
+* 16x2 LCD display (lcd 1602 with i2c connection) to display message in 2 rows
+* Logitech C310 webcam or equivalent that could be detected by Raspberry Pi 
+for OpenCV (Computer Vision) in the future
+* Mini-Speaker with amplifier for audio output in the future
+* Bread board to connect related hardware together
+* T-Cobbler connector and cable
+* Wire Jumpers
+* Mini On-Off Toggle switch
+* 220 ohms resistors
+* Mini-size wireless USB keyboard to enter commands in Raspberry Pi and 
+control the Robot Car
+* HDMI LCD display to show the Raspberry Pi desktop for easy calibration. 
+We could use VNC to remote display the Raspberry Pi desktop also
 
-
-
-
-
-
-
-
+![Robot Car - component 1](images/Robot_Car_component1.JPG)
+![Robot Car - component 1](images/Robot_Car_component2.JPG)
+![Robot Car - component 1](images/Robot_Car_component3.JPG)
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-
 
 
 #### Prerequisites
