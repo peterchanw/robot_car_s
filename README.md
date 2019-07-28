@@ -47,10 +47,88 @@ We could use VNC to remote display the Raspberry Pi desktop also
 ![Robot Car - component 1](images/Robot_Car_component3.JPG)
 
 **Wiring the Robot Car**
+
 ![Robot Car - wiring 1](images/Robot_Car_wiring1.jpg)
 ![Robot Car - wiring 2](images/Robot_Car_wiring2.JPG)
 ![Robot Car - wiring 3](images/Robot_Car_wiring3.JPG)
 ![Robot Car - wiring 4](images/Robot_Car_wiring4.jpg)
+
+#### Installing
+
+**Install Python libraries to support the hardware**
+
+* **Install Max7219** python supporting library for Raspberry Pi
+    Richard Hull. 2016. Raspberry PI MAX7219 driver. [ONLINE] Available at: 
+    https://max7219.readthedocs.io/en/0.2.3/
+    1. Follow either options to complete 'Step 1'
+        * Option 1:
+            > sudo apt-get install python3-dev python3-pip
+        
+            > sudo pip3 install max7219
+        * Option 2:
+            > git clone https://github.com/rm-hull/max7219.git
+            
+            > cd max7219
+            
+            > sudo pip3 install -e .
+            
+    2. Follow the specific steps below
+        > cd max7219
+        
+        > sudo apt-get install python3-dev python3-pip
+        
+        > sudo pip3 install spidev
+        
+        > sudo python3 setup.py install
+        
+    3. Problem (if applicable): “No module named luma.led.matrix.device”
+    
+        Force reinstall of the “luma.led.matrix.device” module may need to do so
+        > sudo -H pip3 install --upgrade --force-reinstall --ignore-installed luma.led_matrix
+        
+* **Install 16x2 LCD display (lcd1602)** python supporting library for Raspberry Pi
+    Denis Pleic. 2015. RPi_I2C_driver.py [ONLINE] Available at: https://gist.github.com/DenisFromHR/cc863375a6e19dce359d
+    Reference: http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
+    > sudo apt-get update
+    
+    > sudo apt-get install i2c-tools
+    
+    > sudo apt-get install python3-smbus
+    
+    * Copy the Python driver codes from the link below and save as RPi_I2C_driver.py
+    https://gist.github.com/DenisFromHR/cc863375a6e19dce359d/raw/36b82e787450d127f5019a40e0a55b08bd43435a/RPi_I2C_driver.py
+     
+* **Install Accelerometer (ADXL345) module** python supporting library for Raspberry Pi
+    Tony DiCola. 2015. Adafruit_Python_ADXL345. [ONLINE] Available at:  
+    https://github.com/adafruit/Adafruit_Python_ADXL345 
+    * Follow either options to complete 'Step 1'
+        * Option 1:
+            > sudo apt-get install git build-essential python3-dev
+            
+            > cd ~
+            
+            > git clone https://github.com/adafruit/Adafruit_Python_ADXL345.git
+            
+            > cd Adafruit_Python_ADXL345
+            
+            > sudo python setup.py install
+            
+        * Option 2:
+            > sudo pip3 install adafruit-adxl345
+       
+**Use test programs to confirm the Robot Car components are working**
+
+* Use the following Python codes to test:
+    * **key_test.py** to test the wireless USB keyboard press
+    * **lcd1602_test.py** to test the lcd1602 with I2C connection display
+    * **matrix_demo.py** to test the MAX7219 8x8 LED display
+    * **motor_test.py** to test car left and right motors operation
+    * **rgb_led.py** to test the RGB led display
+    * **servo_test.py** to test the micro servo sg90 operation
+    * **simpletest.py** to test the ADXL345 accelerometer the yaw-roll-pitch of the car
+    * **ultrasonic_HC-SR04.py** to test the HC-SR04 ultrasonic sensor measuring distance
+
+<p></p>
 
 #### Prerequisites
 
@@ -60,7 +138,7 @@ What things you need to install the software and how to install them
 Give examples
 ```
 
-#### Installing
+
 
 A step by step series of examples that tell you how to get a development env running
 
