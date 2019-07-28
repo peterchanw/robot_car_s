@@ -9,15 +9,25 @@ Different types of common hardware are used to enable movement
 (sound and speaker), display information (LED matrix and LCD display) 
 and sensor to detect environment changes (distance sensor and accelerometer)
 
-![Robot Car - Raspberry Pi 3 - Front](images/Robot_Car.jpg)
-![Robot Car - Raspberry Pi 3 - Back](images/Robot_Car_back.JPG)
-![Robot Car - Raspberry Pi 3 - Side](images/Robot_Car_side.JPG)
-<img src=
-
-
-
+![Robot Car - Raspberry Pi 3](images/Robot_Car.jpg)
+![Robot Car - others](images/Robot_Car_others.JPG)
 
 ## Getting Started
+**Physical setup:**
+* Robot Car chassis, wheels, motors, power supply
+ and circuit control board (L298N) for movement
+* Single-board computer (Raspberry Pi 3) to 
+run the Python program and control the Raspberry Pi Robot Car
+* Separated Power supply for the robot car motors
+* Separated Power supply for the Raspberry Pi 3
+
+
+
+
+
+
+
+
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
