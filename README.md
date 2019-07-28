@@ -87,14 +87,13 @@ We could use VNC to remote display the Raspberry Pi desktop also
         > sudo -H pip3 install --upgrade --force-reinstall --ignore-installed luma.led_matrix
         
 * **Install 16x2 LCD display (lcd1602)** python supporting library for Raspberry Pi
-    Denis Pleic. 2015. RPi_I2C_driver.py [ONLINE] Available at: https://gist.github.com/DenisFromHR/cc863375a6e19dce359d
+    * Denis Pleic. 2015. RPi_I2C_driver.py [ONLINE] Available at: https://gist.github.com/DenisFromHR/cc863375a6e19dce359d
+    * Reference: http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
+        > sudo apt-get update
     
-    Reference: http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
-    > sudo apt-get update
+        > sudo apt-get install i2c-tools
     
-    > sudo apt-get install i2c-tools
-    
-    > sudo apt-get install python3-smbus
+        > sudo apt-get install python3-smbus
     
     * Copy the Python driver codes from the link below and save as RPi_I2C_driver.py
     https://gist.github.com/DenisFromHR/cc863375a6e19dce359d/raw/36b82e787450d127f5019a40e0a55b08bd43435a/RPi_I2C_driver.py
