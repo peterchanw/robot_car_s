@@ -47,11 +47,10 @@ We could use VNC to remote display the Raspberry Pi desktop also
 ![Robot Car - component 1](images/Robot_Car_component3.JPG)
 
 **Wiring the Robot Car**
-![Robot Car - wiring 1](images/Robot_Car_wiring1.JPG)
+![Robot Car - wiring 1](images/Robot_Car_wiring1.jpg)
 ![Robot Car - wiring 2](images/Robot_Car_wiring2.JPG)
-
-
-
+![Robot Car - wiring 3](images/Robot_Car_wiring3.JPG)
+![Robot Car - wiring 4](images/Robot_Car_wiring4.jpg)
 
 #### Prerequisites
 
