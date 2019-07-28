@@ -88,6 +88,7 @@ We could use VNC to remote display the Raspberry Pi desktop also
         
 * **Install 16x2 LCD display (lcd1602)** python supporting library for Raspberry Pi
     Denis Pleic. 2015. RPi_I2C_driver.py [ONLINE] Available at: https://gist.github.com/DenisFromHR/cc863375a6e19dce359d
+    
     Reference: http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
     > sudo apt-get update
     
