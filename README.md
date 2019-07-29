@@ -16,7 +16,7 @@ and sensor to detect environment changes (distance sensor and accelerometer)
 **Physical setup (components):**
 * Robot Car chassis, wheels, motors, power supply
  and circuit control board (L298N) for movement
-* Single-board computer (Raspberry Pi 3) to 
+* Single-board computer (Raspberry Pi 3 Model B) to 
 run the Python program and control the Raspberry Pi Robot Car
 * Separated Power supply for the robot car motors
 * Separated Power supply for the Raspberry Pi 3
@@ -112,9 +112,16 @@ We could use VNC to remote display the Raspberry Pi desktop also
             ````
             sudo pip3 install adafruit-adxl345
             ````
+* **Install pynput 1.4.2** (https://pypi.org/project/pynput/)
+    * install the pynput python library to listen the key pressed
+    ````
+        pip install pynput
+    ````
+    * pynput documentation (https://pynput.readthedocs.io/en/latest/)
+    
 **Use test programs to confirm the Robot Car components are working**
 
-* Use the following Python codes to test:
+* Use the following Python codes to test under 'test' sub-director:
     * **key_test.py** to test the wireless USB keyboard press
     * **lcd1602_test.py** to test the lcd1602 with I2C connection display
     * **matrix_demo.py** to test the MAX7219 8x8 LED display
@@ -124,6 +131,98 @@ We could use VNC to remote display the Raspberry Pi desktop also
     * **simpletest.py** to test the ADXL345 accelerometer the yaw-roll-pitch of the car
     * **ultrasonic_HC-SR04.py** to test the HC-SR04 ultrasonic sensor measuring distance
 
+## Running the tests
+
+Use Python 3 IDLE or run python in command line to execute the test programs under 'test'
+sub-directory
+* Test the wireless keyboard press - **key_test.py**
+    ````
+        python key_test.py
+    ````
+    * Press any key in wireless USB keyboard to check the key pressed in the Python Console
+    * Press 'ESC' key to exit the program
+* Test the lcd1602 with I2C connection display - **lcd1602_test.py** and **i2c_lcd_driver.py**
+    ````
+        python lcd1602_test.py
+    ````
+    * lcd1602 display should display 'Hello World' in the top row from column 0
+    * lcd1602 display should display 'Test LCD1602' in the second row from column 3
+* Test the MAX7219 8x8 LED matrix - **matrix_demo.py**
+    ````
+        python matrix_demo.py
+    ````
+    * MAX7219 8x8 LED display should display the following:
+        1. Texts fast scrolling
+        2. Texts slow scrolling
+        3. Texts vertical scrolling
+        4. Change brightness
+        5. 'Alternative fonts' text display
+        6. 'Proportional fonts' text display
+        7. CP437 characters display 
+* Test the motors of the car with L298n dual motor control module - **motor_test.py**
+    ````
+        python motor_test.py
+    ````
+    * motors should move as following using the wireless USB keyboard:
+        1. Press 'x' key to start the program and both motors move forward 
+        2. Press 's' key to stop both motors
+        3. Press 'f' key to start the left motor only - turn left
+        4. Press 'r' key to start the right motor only - turn right
+        5. Press 'ESC' key to quit the program
+* Test the RGB led - **rgb_led.py**
+    ````
+        python rgb_led.py
+    ````
+    * RGB led has ability to display different colour with various intensity of 
+    Red led, Green led and Blue led within the RGB led
+    * RGB led should display the following colour in sequence:
+        * Red, Green, Blue, Magenta, Cyan, Yellow
+    * Press 'Ctrl-C' key to quit the program
+* Test the servo operation - **servo_test.py**
+    ````
+        python servo_test.py
+    ````
+    * Micro servo sg90 should span from left 0 degree to 180 degree at the right 
+    and then come back in reverse direction
+    * Press 'Ctrl-C' key to quit the program and reset the servo idle position
+    to 90 degree
+* Test the ADXL345 accelerometer - **simpletest.py**
+    ````
+        python simpletest.py
+    ````
+    * ADXL345 should display the x,y,z axis value (i.e. roll-yaw-pitch).
+    The value could be negative or positive depending the position of the
+    3-dimension space
+    * Press 'Ctrl-C' key to quit the program
+* Test the HC-SR04 ultrasonic display - **ultrasonic_HC_SR04.py**
+    ````
+        python ultrasonic_HC-SR04.py
+    ````
+    * HC-SR04 should measure the distance from the barrier to HC-SR04 and display
+    in the Python Console
+    * Press 'Ctrl-C' key to quit the program
+    * HC-SR04 has range limitation from 2cm to 400cm
+
+## Deployment
+ 
+* Clone or download the zip file of the program to your Raspberry Pi 3 Model B
+    ````
+    https://github.com/peterchanw/robot_car_s.git
+    ````
+* Run the main program **robot.py**
+    ````
+    python robot.py
+    ````
+
+## Built With
+
+* Single-board computer (Raspberry Pi 3 Model B)
+* Python 3.x
+
+## Versioning
+
+Version 1.10
+
 ## Authors
 
 * **Peter Chan** - *Initial work* - (https://github.com/peterchanw/robot_car_s)
@@ -132,3 +231,21 @@ We could use VNC to remote display the Raspberry Pi desktop also
 
 This project is licensed under the GNU General Public License version 3 - see the [LICENSE.md](LICENSE.md) file for details
 
+## Acknowledgments
+
+* Tony DiCola. 2015. Adafruit_Python_ADXL345. [ONLINE] Available at:
+  https://github.com/adafruit/Adafruit_Python_ADXL345 
+* Richard Hull. 2016. Raspberry PI MAX7219 driver. [ONLINE] Available at:
+  https://max7219.readthedocs.io/en/0.2.3/
+* Villar Jacques. 2016. How do RGB LEDs work? [ONLINE] Available at:  
+  https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/
+* RapidTables. 2019. RGB Color Codes Chart. [ONLINE] Available at:
+  https://www.rapidtables.com/web/color/RGB_Color.html
+* Denis Pleic. 2015. RPi_I2C_driver.py [ONLINE] Available at: 
+https://gist.github.com/DenisFromHR/cc863375a6e19dce359d
+* Circuit Basics. 2016. How to Setup an I2C LCD on the Raspberry Pi [ONLINE] Available at:
+  http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
+
+  
+
+ 
