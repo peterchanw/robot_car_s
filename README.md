@@ -214,6 +214,16 @@ sub-directory
     python robot.py
     ````
 
+* key to operate the Robot Car
+    * 'ESC' key - quit the program
+    * 'w' key or 'Up arrow' key - move forward
+    * 'x' key or 'Down arrow' key - move backward
+    * 'a' key or 'Left arrow' key - turn left
+    * 'd' key or 'Right arrow' key - turn right
+    * 's' key or 'Enter' key - stop
+    * 'p' key - start servo panning to scan distance
+    * 'o' key - stop servo panning to scan distance
+
 ## Built With
 
 * Single-board computer (Raspberry Pi 3 Model B)
