@@ -245,7 +245,8 @@ This project is licensed under the GNU General Public License version 3 - see th
 https://gist.github.com/DenisFromHR/cc863375a6e19dce359d
 * Circuit Basics. 2016. How to Setup an I2C LCD on the Raspberry Pi [ONLINE] Available at:
   http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
-
+* Moses Palmer. 2019. pynput v1.4.2 [ONLINE] Available at:
+  https://github.com/moses-palmer/pynput.git
   
 
  
