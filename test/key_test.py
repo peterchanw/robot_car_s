@@ -10,7 +10,7 @@ def on_release(key):
         print('{0} released'.format(key))
         if key == keyboard.Key.esc:
             # Stop listener
-        return False
+            return False
 # Collect events until released
 with keyboard.Listener(
         on_press=on_press,
@@ -21,6 +21,4 @@ with keyboard.Listener(
 listener = keyboard.Listener(
         on_press=on_press,
         on_release=on_release)
-    listener.start()
-
-
+listener.start()
